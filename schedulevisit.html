@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/navBarFooter.css">
+    <link rel="stylesheet" href="css/schedulevisit.css">
+    <link rel="stylesheet" href="css/calendar.css">
+    <link rel="icon" href="images/titlelogo.png" type="image/icon type">
+
+        <!-- JS -->
+    <script src="js/navigationBar.js"></script>
+    <script src="js/highlightNavBar.js"></script>
+    <script src="js/resetPage.js"></script>
+    <script src="js/calendar.js"></script>
+    <title>Schedule A Visit | New College of Florida</title>
+</head>
+
+<body>
+
+    <!-- NAV STARTS HERE -->
+    <div class="nav">
+        <div class="nav">
+            <div class="nav-title" id="title">
+                <div class="logo" id="logo">
+                    <a href="index.html" onmouseover="highlightNav(this)" onmouseout="normalNav(this)"
+                        style="text-decoration: none; color: #26478E;">
+                        <img src="images/ncflogoPNG.png" alt="New College Logo" width="160px" height="40px"/>
+                    </a>
+                </div>
+                <div class="my-title" id="myTitle">
+                    <h1>Computer Science</h1>
+                </div>
+                <div class="options" id="options">
+                    <ul style="font-size: large;">
+                        <li><a href="requestinfo.html" onmouseover="highlightNav(this)" onmouseout="normalNav(this)"
+                            style="text-decoration: none; color: #26478E;">Request Info</a></li> 
+                        <li><a href="curriculum.html" onmouseover="highlightNav(this)" onmouseout="normalNav(this)"
+                            style="text-decoration: none; color: #26478E;">Curriculum</a></li>
+                        <li><a href="faculty.html" onmouseover="highlightNav(this)" onmouseout="normalNav(this)"
+                            style="text-decoration: none; color: #26478E;">Faculty</a></li>
+                        <li><a href="index.html" onmouseover="highlightNav(this)" onmouseout="normalNav(this)"
+                            style="text-decoration: none; color: #26478E;">Home</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- NAV ENDS HERE -->
+
+    <div style="overflow:auto">
+        <div class="fixed-bg">
+            <br/><br/>
+            <div class="schedule-container">
+                <h1 style="border-bottom: solid; border-color: #28304B; padding-bottom: 2px; color: #28304B;">Schedule A Visit</h1>
+                <p style="color: #354164; font-size: x-large;">Select date/time and add to the calendar here:</p>
+
+                <div id="enter-info">
+                    <form>
+                        <p id="key" style="margin-bottom: 5px;"><strong>First Name: </strong></p>
+                        <input class="field" type="text" id="txtName" placeholder="Enter your name here"/>
+                        <br/>
+            
+                        <p id="value" style="margin-bottom: 5px;"><strong>Last Name: </strong></p>
+                        <input class="field" type="text" onkeyup="success()" placeholder="Enter your last name here"/>
+                        <br/>
+
+                        <p id="key" style="margin-bottom: 5px;"><strong>E-mail: </strong></p>
+                        <input class="field" type="text" id="txtName" placeholder="Enter your name here"/>
+                        
+                        <br/><br/>
+                    </form>
+                </div>
+                <br/>
+                <div id="calendar-container">
+                    <div class="calendar" id="calendar">
+                        <div class="calendar-btn month-btn" onclick="$('#months').toggle('fast')">
+                            <span id="curMonth"></span>
+                            <div id="months" class="months dropdown"></div>
+                        </div>
+                    
+                        <div class="calendar-btn year-btn" onclick="$('#years').toggle('fast')">
+                            <span id="curYear"></span>
+                            <div id="years" class="years dropdown"></div>
+                        </div>
+                    
+                        <div class="clear"></div>
+                    
+                        <div class="calendar-dates">
+                            <div class="days">
+                                <div class="day label">SUN</div>
+                                <div class="day label">MON</div>
+                                <div class="day label">TUE</div>
+                                <div class="day label">WED</div>
+                                <div class="day label">THUR</div>
+                                <div class="day label">FRI</div>
+                                <div class="day label">SAT</div>
+                    
+                                <div class="clear"></div>
+                            </div>
+                    
+                            <div id="calendarDays" class="days">
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+                <br/>
+
+                <div class="rowButton">
+                    <div class="columnButton">
+                        <p><input class="submit" id="find" type="submit" value="Submit"/></p>
+                    </div>
+                    <div class="columnButton">
+                        <p><input class="submit" id="reset" type="reset" value="Reset" onClick="refreshPage()"/></p>
+                    </div>
+                </div>
+            </div>
+            <br/>
+            <div style="text-align: center;">
+                <button type="button" onclick="javascript:window.close()">CLOSE</button>
+            </div>
+            <br/><br/>
+        </div>
+    </div>
+
+<!-- FOOTER STARTS HERE -->
+<div class="footer">
+    <div class="row">
+        <div class="column">
+          <h2>Contact</h2>
+          <p>New College of Florida<br/>
+            500 College Dr<br/>
+            Sarasota, FL 34243<br/>
+            (941) 487-5000
+            </p>
+        </div>
+        <div class="column">
+            <h2>Connect</h2>
+            <a href="https://www.linkedin.com/school/newcollegeofflorida/mycompany/" target="_blank">LinkedIn</a><br/>
+            <a href="https://www.instagram.com/newcollegeoffl/" target="_blank">Instagram</a><br/>
+            <a href="https://twitter.com/NewCollegeofFL" target="_blank">Twitter</a><br/>
+            <a href="https://www.youtube.com/user/NewCollegeofFL" target="_blank">YouTube</a>
+        </div>
+    </div>
+</div>
+<!-- FOOTER ENDS HERE -->
+
+</body>
+</html>
