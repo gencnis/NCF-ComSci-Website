@@ -1,2 +1,2 @@
-# NCF-ComSci-Website
-This New College of Florida Computer Science Department website is designed for Front-End Web Design &amp; Development Course.
+# NCF-ComSci-Website-Demo
+This New College of Florida Computer Science Department website demo is designed for Front-End Web Design &amp; Development Course.
